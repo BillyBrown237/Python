@@ -1,0 +1,21 @@
+# function to calculate a bill
+
+def calculate_tax(bill, tax_rate):
+    return round((bill * tax_rate)/100,2) 
+
+print(calculate_tax(175.00 ,15))
+
+def is_leap(year):
+    leap = False
+
+    if year % 4 == 0:
+        leap = True
+        if year % 100 == 0:
+            leap = False
+            if year % 400 == 0:
+                leap = True
+
+    return leap
+
+print(is_leap(2020))
+
